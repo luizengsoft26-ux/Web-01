@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(110, 135, 115);
+    font-family: system-ui;
+}
+
+h1 {
+    color: #0a66c2;
+}
+
+p {
+    color: #0d0c0f;
+    line-height: 1.5;
+}
+
+#subtitulo {
+    color: darkgreen;
+    font-size: 20px;
+}
+
+.aviso {
+    background: #b8e7eb;
+    color: #14826c;
+    padding: 8px;
+    border: 1px solid #14826c;
+    border-radius: 4px;
+}
