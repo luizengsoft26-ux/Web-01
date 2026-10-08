@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(110, 135, 115);
+    background-color: PeachPuff;
+    background-image: url("back01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: system-ui;
 }
 
@@ -23,4 +26,11 @@ p {
     padding: 8px;
     border: 1px solid #14826c;
     border-radius: 4px;
+}
+
+.caixa {
+    width: 400px;
+    min-height: 300px;
+    max-width: 100%;
+    background: lightgray;
 }
