@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #100d12;
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 30px 0;
+    scroll-margin-top: 20px;
+}
+
+section>h2 {
+    color: #ff414d;
+    border-bottom: 2px solid #76202b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #260b14;
+    background-image:
+        linear-gradient(rgba(15, 5, 12, 0.72),
+            rgba(15, 5, 12, 0.92)),
+        url("https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #b51f32;
+}
+
+header h1 {
+    color: rgb(255, 65, 77);
+    font-size: 3rem;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    margin: 0;
+}
+
+header h2 {
+    color: #f4dce0;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+header p {
+    color: #ffffff;
+}
+
+nav {
+    background-color: #1d1822;
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #44303e;
+}
+
+nav a {
+    display: inline-block;
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 10px 14px;
+    margin: 3px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #b51f32;
+    color: #ffffff;
+    outline: 2px solid #ff858d;
+    outline-offset: 2px;
+}
+
+.filme-destaque {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background-color: #211923;
+    border: 1px solid #71303d;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filme-destaque img {
+    width: 260px;
+    max-width: 40%;
+    border-radius: 8px;
+    border: 2px solid #8f3442;
+    object-fit: cover;
+}
+
+.info-destaque {
+    flex: 1;
+}
+
+.info-destaque h3 {
+    color: #ff626d;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.info-destaque h4 {
+    margin-bottom: 5px;
+}
+
+.lista-generos {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+.lista-generos li {
+    margin-bottom: 5px;
+}
+
+/* C. GRADE DE FILMES */
+.grade-filmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1b1720;
+    border-radius: 10px;
+}
+
+.card-filme {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background-color: #2a202c;
+    border: 1px solid #493542;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-filme:hover {
+    transform: translateY(-5px);
+    border-color: #ff414d;
+}
+
+.card-filme img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.card-filme h3 {
+    font-size: 1.15rem;
+}
+
+.card-filme h3 a {
+    color: #ff6974;
+    text-decoration: none;
+}
+
+.card-filme h3 a:hover,
+.card-filme h3 a:focus {
+    color: #bc0606;
+    text-decoration: underline;
+}
+
+.card-filme p {
+    font-size: 0.95rem;
+    margin: 8px 0;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #211923;
+}
+
+th,
+td {
+    border: 1px solid #493542;
+    padding: 13px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #8f1d30;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #302432;
+}
+
+tbody tr:hover {
+    background-color: #49303e;
+}
+
+.observacao {
+    font-size: 0.85rem;
+    color: #c6b9c7;
+    margin-top: 10px;
+}
+
+/* E. LISTA DE GÊNEROS */
+.generos-explorar {
+    list-style-type: square;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 35px;
+}
+
+.generos-explorar li {
+    background-color: #281b29;
+    border-left: 3px solid #d52c43;
+    border-radius: 4px;
+    padding: 10px 15px;
+    flex: 1 1 220px;
+}
+
+/* F. SOBRE E CONTATO */
+.sobre {
+    background-color: #211923;
+    border: 1px solid #493542;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.imagem-sobre {
+    float: right;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #b51f32;
+    margin: 0 0 15px 20px;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #76202b;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.redes-sociais a:hover,
+.redes-sociais a:focus {
+    background-color: #d52c43;
+    color: #ffffff;
+    outline: 2px solid #ff858d;
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header h2 {
+        font-size: 1.05rem;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .filme-destaque {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .filme-destaque img {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .card-filme {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

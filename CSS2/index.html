@@ -1,0 +1,229 @@
+<!--arquivo html e css de catalogo de filme para segunda avaliação web1 de CSS-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras do Terror | Catálogo de Filmes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- A. cabeçalho -->
+    <header id="inicio">
+        <h1>Sombras do Terror</h1>
+        <h2>Encare os seus piores pesadelos...</h2>
+        <p>Um catálogo para quem ama sentir medo!</p>
+    </header>
+
+    <!-- E. Menu -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#destaque">Destaque da Semana</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#lancamentos">Notas e Prêmios</a>
+        <a href="#generos">Gêneros</a>
+        <a href="#contato">Sobre/Contato</a>
+    </nav>
+
+    <main>
+
+        <!-- B. Destaque da semana -->
+        <section id="destaque">
+            <h2>Destaque da Semana</h2>
+
+            <article class="filme-destaque">
+                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=500&q=80"
+                    alt="Imagem sombria para representar um filme de terror">
+
+                <div class="info-destaque">
+                    <h3>Invocação do Mal</h3>
+
+                    <p>
+                        Um casal de investigadores paranormais é chamado
+                        para ajudar uma família que enfrenta acontecimentos
+                        assustadores em sua nova casa. O que parecia ser
+                        apenas uma presença estranha se transforma em uma
+                        luta aterrorizante contra forças sobrenaturais.
+                    </p>
+
+                    <p><strong>Ano:</strong> 2013</p>
+
+                    <h4>Gêneros:</h4>
+                    <ul class="lista-generos">
+                        <li>Terror sobrenatural</li>
+                        <li>Suspense</li>
+                        <li>Drama</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- C. Grade de filmes -->
+        <section id="catalogo">
+            <h2>Catálogo de Filmes</h2>
+            <p>Escolha seu próximo pesadelo!</p>
+
+            <div class="grade-filmes">
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80"
+                        alt="Floresta sombria">
+                    <h3>A Invocação do Mal</h3>
+                    <p><strong>Ano:</strong> 2013</p>
+                    <p><strong>Gênero:</strong> Sobrenatural</p>
+                </article>
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=400&q=80"
+                        alt="Mar escuro e misterioso">
+                    <h3>O Iluminado</a></h3>
+                    <p><strong>Ano:</strong> 1980</p>
+                    <p><strong>Gênero:</strong> Psicológico</p>
+                </article>
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80"
+                        alt="Paisagem isolada e misteriosa">
+                    <h3>Alien, o Oitavo Passageiro</h3>
+                    <p><strong>Ano:</strong> 1979</p>
+                    <p><strong>Gênero:</strong> Ficção científica e terror</p>
+                </article>
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=400&q=80"
+                        alt="Céu noturno sombrio">
+                    <h3>Halloween</h3>
+                    <p><strong>Ano:</strong> 1978</p>
+                    <p><strong>Gênero:</strong> Slasher</p>
+                </article>
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=400&q=80"
+                        alt="Paisagem escura com atmosfera de suspense">
+                    <h3>Brinquedo Assassino</h3>
+                    <p><strong>Ano:</strong> 1988</p>
+                    <p><strong>Gênero:</strong> Terror e suspense</p>
+                </article>
+
+                <article class="card-filme">
+                    <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=400&q=80"
+                        alt="Árvores em uma floresta escura">
+                    <h3>Invocação do Mal 2</h3>
+                    <p><strong>Ano:</strong> 2016</p>
+                    <p><strong>Gênero:</strong> Sobrenatural</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- D. tabela de notas e premios -->
+        <section id="lancamentos">
+            <h2>Notas e Prêmios</h2>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Filme</th>
+                            <th>Ano</th>
+                            <th>Nota</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Invocação do Mal</td>
+                            <td>2013</td>
+                            <td>7,5/10</td>
+                            <td>Destaque</td>
+                        </tr>
+                        <tr>
+                            <td>O Iluminado</td>
+                            <td>1980</td>
+                            <td>8,4/10</td>
+                            <td>Clássico</td>
+                        </tr>
+                        <tr>
+                            <td>Alien</td>
+                            <td>1979</td>
+                            <td>8,5/10</td>
+                            <td>Premiado</td>
+                        </tr>
+                        <tr>
+                            <td>Halloween</td>
+                            <td>1978</td>
+                            <td>7,7/10</td>
+                            <td>Clássico</td>
+                        </tr>
+                        <tr>
+                            <td>Brinquedo Assassino</td>
+                            <td>1988</td>
+                            <td>6,7/10</td>
+                            <td>Cult</td>
+                        </tr>
+                        <tr>
+                            <td>Invocação do Mal 2</td>
+                            <td>2016</td>
+                            <td>7,3/10</td>
+                            <td>Popular</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="observacao">
+                * As notas são ilustrativas e podem variar conforme a plataforma.
+            </p>
+        </section>
+
+        <!-- E. lista de generos -->
+        <section id="generos">
+            <h2>Explore por Gênero</h2>
+
+            <ul class="generos-explorar">
+                <li>Terror sobrenatural</li>
+                <li>Slasher</li>
+                <li>Terror psicológico</li>
+                <li>Found footage</li>
+                <li>Monstros e criaturas</li>
+                <li>Suspense e mistério</li>
+            </ul>
+        </section>
+
+        <!-- F. contato -->
+        <section id="contato">
+            <h2>Sobre o Catálogo</h2>
+
+            <div class="sobre">
+                <img class="imagem-sobre"
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80"
+                    alt="Paisagem escura representando o universo do terror">
+
+                <p>
+                    O Sombras do Terror é um projeto desenvolvido para
+                    apresentar filmes de terror de diferentes épocas e
+                    estilos. Nosso objetivo é reunir clássicos, histórias
+                    sobrenaturais e produções cheias de suspense em um só
+                    lugar.
+                </p>
+
+            </div>
+
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+
+                <a href="mailto:contato@sombrasdoterror.com">E-mail</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
