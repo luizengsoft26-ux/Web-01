@@ -1,163 +1,170 @@
 <!--arquivo html e css de catalogo de filme para segunda avaliação web1 de CSS-->
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sombras do Terror | Catálogo de Filmes</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header id="inicio">
-        <h1>Sombras do Terror</h1>
-        <h2>Encare os seus piores pesadelos...</h2>
-        <p>Um catálogo para quem ama sentir medo!</p>
+    <header id="cabecalho">
+        <div class="header-content">
+            <h1 id="titulo-principal">Sombras do Terror</h1>
+            <h2 id="subtitulo">Encare os seus piores pesadelos...<br>Um catálogo para quem ama sentir medo!</h2>
+            <nav id="menu-navegacao">
+                <ul>
+                    <li><a href="#destaque">Destaque</a></li>
+                    <li><a href="#catalogo-secao">Catálogo</a></li>
+                    <li><a href="#lancamentos">Tabela & Prêmios</a></li>
+                    <li><a href="#favoritos-secao">Favoritos (<span id="contador-favoritos">0</span>)</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- E. Menu -->
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#destaque">Destaque da Semana</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#lancamentos">Notas e Prêmios</a>
-        <a href="#generos">Gêneros</a>
-        <a href="#contato">Sobre/Contato</a>
-    </nav>
-
-    <main>
-
+    <main class="container">
+ 
         <section id="destaque">
-        <h2>Destaque da Semana</h2>
-
-        <article class="filme-destaque">
-        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=500&q=80"
-                    alt="Imagem sombria para representar um filme de terror">
-
-        <div class="info-destaque">
-        <h3>Invocação do Mal</h3>
-
-        <p> Um casal de investigadores paranormais é chamado para ajudar uma família que enfrenta acontecimentos assustadores em sua nova house. O que parecia ser apenas uma presença estranha se transforma em uma luta aterrorizante contra forças sobrenaturais.</p>
-
-        <p><strong>Ano:</strong> 2013</p>
-
-        <h4>Gêneros:</h4>
-        <ul class="lista-generos">
-            <li>Terror sobrenatural</li>
-            <li>Suspense</li>
-            <li>Drama</li>
-        </ul>
-        </div>
-        </article>
+            <h2>Destaque da Semana</h2>
+            <div class="destaque-card">
+                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=500&q=80"
+                    alt="Imagem sombria para representar um filme de terror" class="destaque-poster">
+                <div class="destaque-info">
+                    <h3>Invocação do Mal (The Conjuring)</h3>
+                    <p class="sinopse">
+                        Harrisville, Estados Unidos. A família Perron muda-se para uma casa antiga e assustadora onde começam a ocorrer fenômenos paranormais aterrorizantes. Desesperados, eles recorrem aos renomados investigadores paranormais Ed e Lorraine Warren para enfrentar uma presença demoníaca implacável.
+                    </p>
+                    <ul class="generos-lista">
+                        <li>Sobrenatural</li>
+                        <li>Terror</li>
+                        <li>Suspense</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-    <section id="catalogo">
-        <h2>Catálogo de Filmes</h2>
-        <p>Escolha seu próximo pesadelo!</p>
+        <section id="catalogo-secao">
+            <div class="catalogo-header">
+                <h2>Catálogo de Filmes</h2>
+                <span id="contador">Total de filmes: 0</span>
+            </div>
 
-        <div id="grade-filmes">
-            
-        </div>
-        
-    </section>
+            <div class="controles-filtro">
+                <input type="text" id="busca" placeholder="Buscar filme por título...">
+                
+                <div class="filtro-grupo">
+                    <label for="filtro-genero">Gênero:</label>
+                    <select id="filtro-genero">
+                        <option value="Todos">Todos</option>
+                    </select>
+                </div>
+
+                <button id="btn-inverter">Inverter ordem</button>
+            </div>
+
+            <div id="catalogo" class="grade-filmes"></div>
+        </section>
+
+        <section id="favoritos-secao">
+            <h2>Meus Favoritos</h2>
+            <div class="favoritos-container">
+                <ul id="lista-favoritos">
+                    <li class="vazio">Nenhum filme favoritado ainda.</li>
+                </ul>
+                <button id="btn-limpar-favoritos">Limpar favoritos</button>
+            </div>
+        </section>
 
         <section id="lancamentos">
-        <h2>Notas e Prêmios</h2>
-
-        <div class="tabela-container">
-        <table>
-        <thead>
-        <tr>
-        <th>Filme</th>
-        <th>Ano</th>
-        <th>Nota</th>
-        <th>Status</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr>
-            <td>Invocação do Mal</td>
-            <td>2013</td>
-            <td>7,5/10</td>
-            <td>Destaque</td>
-        </tr>
-        <tr>
-            <td>O Iluminado</td>
-            <td>1980</td>
-            <td>8,4/10</td>
-            <td>Clássico</td>
-        </tr>
-        <tr>
-            <td>Alien</td>
-            <td>1979</td>
-            <td>8,5/10</td>
-            <td>Premiado</td>
-        </tr>
-        <tr>
-            <td>Halloween</td>
-            <td>1978</td>
-            <td>7,7/10</td>
-            <td>Clássico</td>
-        </tr>
-        <tr>
-            <td>Brinquedo Assassino</td>
-            <td>1988</td>
-            <td>6,7/10</td>
-            <td>Cult</td>
-        </tr>
-        <tr>
-            <td>Invocação do Mal 2</td>
-            <td>2016</td>
-            <td>7,3/10</td>
-            <td>Popular</td>
-        </tr>
-        </tbody>
-        </table>
+            <h2>Histórico de Lançamentos & Prêmios</h2>
+            <div class="table-responsive">
+                <table class="tabela-premios">
+                    <thead>
+                        <tr>
+                            <th>Filme</th>
+                            <th>Ano</th>
+                            <th>Nota</th>
+                            <th>Status / Premiação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Invocação do Mal</td>
+                            <td>2013</td>
+                            <td>7.5</td>
+                            <td>Blockbuster do Terror</td>
+                        </tr>
+                        <tr>
+                            <td>O Iluminado</td>
+                            <td>1980</td>
+                            <td>8.4</td>
+                            <td>Clássico Atemporal (Masterpiece)</td>
+                        </tr>
+                        <tr>
+                            <td>Alien, o 8º Passageiro</td>
+                            <td>1979</td>
+                            <td>8.5</td>
+                            <td>Vencedor de Melhores Efeitos Visuais (Oscar)</td>
+                        </tr>
+                        <tr>
+                            <td>Halloween: A Noite do Terror</td>
+                            <td>1978</td>
+                            <td>7.7</td>
+                            <td>Marco do Cinema Slasher</td>
+                        </tr>
+                        <tr>
+                            <td>Brinquedo Assassino</td>
+                            <td>1988</td>
+                            <td>6.6</td>
+                            <td>Ícone da Cultura Pop</td>
+                        </tr>
+                        <tr>
+                            <td>Invocação do Mal 2</td>
+                            <td>2016</td>
+                            <td>7.3</td>
+                            <td>Sucesso de Bilheteria Mundial</td>
+                        </tr>
+                        <tr>
+                            <td>Poltergeist: O Fenômeno</td>
+                            <td>1982</td>
+                            <td>8.3</td>
+                            <td>Indicado a 3 Prêmios da Academia</td>
+                        </tr>
+                        <tr>
+                            <td>O Grito</td>
+                            <td>2004</td>
+                            <td>5.9</td>
+                            <td>Fenômeno do Terror Oriental</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <p class="observacao">
-                * As notas são ilustrativas e podem variar conforme a plataforma.
-            </p>
-        </section>
-        <section id="generos">
-            <h2>Explore por Gênero</h2>
-
-            <ul class="generos-explorar">
-                <li>Terror sobrenatural</li>
-                <li>Slasher</li>
-                <li>Terror psicológico</li>
-                <li>Found footage</li>
-                <li>Monstros e criaturas</li>
-                <li>Suspense e mistério</li>
-            </ul>
         </section>
 
-        <section id="contato">
+        <section id="sobre" class="sobre-secao">
             <h2>Sobre o Catálogo</h2>
-
-            <div class="sobre">
-                <img class="imagem-sobre"
-                    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80"
-                    alt="Paisagem escura representando o universo do terror">
-
+            <div class="sobre-conteudo">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80"
+                    alt="Paisagem escura representando o universo do terror" class="dev-img">
                 <p>O Sombras do Terror é um projeto desenvolvido para apresentar filmes de terror de diferentes épocas e
-  estilos. Nosso objetivo é reunir clássicos, histórias sobrenaturais e produções cheias de suspense em um só lugar. </p>
-
-            </div>
-
-            <div class="redes-sociais">
-                <a href="" target="_blank" rel="noopener noreferrer">Instagram</a>
-
-                <a href="" target="_blank" rel="noopener noreferrer">Facebook</a>
-
-                <a href="">E-mail</a>
+  estilos. Nosso objetivo é reunir clássicos, histórias sobrenaturais e produções cheias de suspense em um só lugar.</p>
+                <div class="social-links">
+                    <a href="" target="_blank" class="social-btn">Instagram</a>
+                    <a href="" target="_blank" class="social-btn">Facebook</a>
+                    <a href="" target="_blank" class="social-btn">E-mail</a>
+                </div>
             </div>
         </section>
 
     </main>
-<script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2026 Sombras do Terror - Catálogo de Filmes - Segunda avaliação da Disciplina Web1.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
